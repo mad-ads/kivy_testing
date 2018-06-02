@@ -1,0 +1,60 @@
+# Kivy language file for mad_app_000
+
+<MainWidgets>
+    size_hint: None,None
+    GridLayout:
+        cols: 2
+        pos: self.parent.pos
+        size: self.parent.size
+        Label:
+            text: 'Username'
+            size_hint: None,None
+            size: 200, 40
+        TextInput:
+            id: uname
+            multiline: False
+            size_hint: None,None
+            size: 200, 35
+        Label:
+            text: 'Password'
+            size_hint: None,None
+            size: 200, 40
+        TextInput:
+            id: pword
+            multiline: False
+            password: True
+            size_hint: None,None
+            size: 200, 35
+        Label:
+            text: ''
+            size_hint: None,None
+            size: 200, 40
+        Button:
+            id: verify
+            text: 'Login'
+            font_size: 25
+            size_hint: None,None
+            size: 200, 35
+        Label:
+            text: ''
+            size_hint: None,None
+            size: 200, 40
+        Button:
+            id: verify
+            text: 'Create Account'
+            font_size: 25
+            size_hint: None,None
+            size: 200, 35
+
+<LoginScreen>:
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        size: self.parent.size
+        MainWidgets:
+            size: 400,200
+
+<MADApp>:
+    FloatLayout:
+        LoginScreen:
+            center: 0.5, 0.5
