@@ -1,0 +1,23 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+ScreenManagement:
+    transition: FadeTransition()
+    MainScreen:
+    AnotherScreen:
+
+<Button>:
+    font_size: 69
+    color: 1,0,0,1
+    background_color: 0,0,0,1
+
+<MainScreen>:
+    name: 'main'
+    Button:
+        on_release: app.root.current = 'other'
+        text: 'Welcome To MAD Ads'
+
+<AnotherScreen>:
+    name: 'other'
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Choose Your Advertisement'
